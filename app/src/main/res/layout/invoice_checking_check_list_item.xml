@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="10dp"
+                 android:orientation="horizontal"
+                 android:paddingTop="10dp"
+                 android:weightSum="1">
+
+                 <TextView
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="0.3"
+                     android:text="Product Name"
+                     android:textColor="@color/secondaryTextColor"
+                     android:textSize="15sp" />
+
+                 <TextView
+                     android:id="@+id/tvProductName"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="0.7"
+                     android:gravity="end"
+                     android:lines="1"
+                     android:textColor="@color/secondaryTextColor"
+                     android:textSize="15sp" />
+
+
+             </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tvInvoiceNumber"
+                    android:layout_width="0dp"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="Invoice No"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/tvVerifiedBarcode"
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:background="@drawable/verify_background_green"
+                    android:gravity="center"
+                    android:drawableEnd="@drawable/ic_approve"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:text="Verified"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/tvVerifyBarcode"
+                    android:layout_width="0dp"
+                    android:visibility="visible"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:background="@drawable/verify_background_green"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:text="Verify Barcode"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/row_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInvoiceNumber"/>
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llCheckBox"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="wrap_content">
+
+                   &lt;!&ndash; <androidx.appcompat.widget.AppCompatTextView
+                        android:padding="8dp"
+                        android:id="@+id/tv_column_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Column 1" />&ndash;&gt;
+                    <CheckBox
+                        android:id="@+id/checkBoxInvoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray" />
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:id="@+id/llColumnOne"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                     <androidx.appcompat.widget.AppCompatTextView
+                         android:padding="8dp"
+                         android:id="@+id/tv_column_one"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:gravity="center"
+                         android:text="Column 1" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:id="@+id/llColumnTwo"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:padding="8dp"
+                        android:id="@+id/tv_column_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Column 1" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="1dp"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:id="@+id/llColumnThree"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:padding="8dp"
+                        android:id="@+id/tv_column_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Column 1" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <View
+                android:id="@+id/row_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </layout>-->

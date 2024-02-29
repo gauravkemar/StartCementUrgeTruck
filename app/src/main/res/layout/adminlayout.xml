@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/toolbar_view" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlServerIp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            app:layout_constraintHorizontal_weight="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tlPort"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edServerIp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Server IP"
+                android:imeOptions="actionDone"
+                android:inputType="number|numberDecimal"
+                android:digits="0123456789."
+                android:textColor="@color/secondaryTextColor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlPort"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintHorizontal_weight="0.3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tlServerIp"
+            app:layout_constraintTop_toTopOf="@+id/tlServerIp"
+            app:layout_constraintBottom_toBottomOf="@+id/tlServerIp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edPort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Port"
+                android:imeOptions="actionDone"
+                android:maxLength="4"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:textColor="@color/secondaryTextColor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Api Endpoint"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textinputantenna"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:errorEnabled="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textinputusername">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvantenna"
+                android:digits="1234567890"
+                android:maxLength="3"
+                android:hint="Antenna Power"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btAntenna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Antenna Power"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
